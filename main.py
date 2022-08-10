@@ -8,7 +8,7 @@ VERSION = "V1"
 
 @app.route('/')
 def home():
-    return socket.gethostname()
+    return socket.gethostname() + "\n"
 
 
 @app.route('/name')
