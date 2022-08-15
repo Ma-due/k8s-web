@@ -16,9 +16,9 @@ def hostName():
     return "ingress test" + socket.gethostname() + "\n"
 
 
-@app.route('/page-one')
+@app.route('/page')
 def page():
-    return "page one" + socket.gethostname() + "\n"
+    return "page " + socket.gethostname() + "\n"
 
 
 @app.route('/version')

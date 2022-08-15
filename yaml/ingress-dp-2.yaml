@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ingress-page
+  labels:
+    app: flask-web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flask-web
+  template:
+    metadata:
+      labels:
+        app: flask-web
+    spec:
+      containers:
+      - name: k8s-web
+        image: maduee2/k8s-web:0.3
+        ports:
+        - containerPort: 5000
+      imagePullSecrets:
+      - name: regcred
