@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: k8s-web
-        image: maduee2/k8s-web:0.3
+        image: maduee2/k8s-web:0.4
         ports:
         - containerPort: 5000
       imagePullSecrets:
