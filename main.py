@@ -11,9 +11,14 @@ def home():
     return socket.gethostname() + "\n"
 
 
-@app.route('/name')
+@app.route('/test')
 def hostName():
-    return socket.gethostname()
+    return "ingress test" + socket.gethostname() + "\n"
+
+
+@app.route('/page-one')
+def page():
+    return "page one" + socket.gethostname() + "\n"
 
 
 @app.route('/version')
