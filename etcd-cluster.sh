@@ -11,9 +11,9 @@ systemctl daemon-reload
 systemctl restart kubelet
 
 # Update HOST0, HOST1 and HOST2 with the IPs of your hosts
-export HOST0=10.138.0.51
-export HOST1=10.138.0.52
-export HOST2=10.139.0.53
+export HOST0=10.138.0.54
+export HOST1=10.138.0.55
+export HOST2=10.138.0.56
 
 # Update NAME0, NAME1 and NAME2 with the hostnames of your hosts
 export NAME0="etcd-1"
