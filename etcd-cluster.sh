@@ -11,14 +11,14 @@ systemctl daemon-reload
 systemctl restart kubelet
 
 # Update HOST0, HOST1 and HOST2 with the IPs of your hosts
-export HOST0=10.138.0.47
-export HOST1=10.138.0.48
-export HOST2=10.139.0.49
+export HOST0=10.138.0.51
+export HOST1=10.138.0.52
+export HOST2=10.139.0.53
 
 # Update NAME0, NAME1 and NAME2 with the hostnames of your hosts
-export NAME0="infra0"
-export NAME1="infra1"
-export NAME2="infra2"
+export NAME0="etcd-1"
+export NAME1="etcd-2"
+export NAME2="etcd-3"
 
 echo ${HOST0}
 # Create temp directories to store files that will end up on other hosts.
