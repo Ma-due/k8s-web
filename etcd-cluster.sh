@@ -20,6 +20,7 @@ export NAME0="infra0"
 export NAME1="infra1"
 export NAME2="infra2"
 
+echo ${HOST0}
 # Create temp directories to store files that will end up on other hosts.
 mkdir -p /tmp/${HOST0}/ /tmp/${HOST1}/ /tmp/${HOST2}/
 
