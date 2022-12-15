@@ -51,3 +51,5 @@ apt install -y kubelet kubeadm kubectl
 
 sed -i 's/"cri"//g' /etc/containerd/config.toml
 systemctl restart containerd
+
+echo "alias k=kubectl" >> ~/.bashrc
