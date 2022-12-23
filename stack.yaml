@@ -1,0 +1,41 @@
+version: "3.7"
+
+networks:
+  net:
+    driver: overlay
+
+services:
+  prometheus:
+    networks:
+      - net
+    image: maduee2/prom:latest
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+    ports: ["9090:9090"]
+
+  grafana:
+    networks:
+      - net
+    image: grafana/grafana
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+    ports: ["3000:3000"]
+
+  cadvisor:
+    networks:
+      - net
+    image: google/cadvisor:v0.27.0
+    deploy:
+      mode: global
+    ports:
+        - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock,readonly
+      - /:/rootfs
+      - /var/run:/var/run
+      - /sys:/sys
+      - /var/lib/docker:/var/lib/docker
