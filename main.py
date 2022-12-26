@@ -3,7 +3,7 @@ import socket
 
 app = Flask(__name__)
 
-VERSION = "V2"
+VERSION = "V3"
 
 
 @app.route('/')
