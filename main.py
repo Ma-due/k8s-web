@@ -23,7 +23,7 @@ def page():
 
 @app.route('/version')
 def ip():
-    return VERSION
+    return VERSION + "\n"
 
 
 if __name__ == '__main__':
