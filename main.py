@@ -3,12 +3,12 @@ import socket
 
 app = Flask(__name__)
 
-VERSION = "V4"
+VERSION = "V1"
 
 
 @app.route('/')
 def home():
-    return socket.gethostname() + "\n"
+    return socket.gethostname() + VERSION + "\n"
 
 
 @app.route('/test')
