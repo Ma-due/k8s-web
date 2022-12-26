@@ -2,5 +2,5 @@ version: "3.7"
 
 services:
   flask:
-    image: maduee2/k8s-web:0.2
+    image: maduee2/k8s-web:latest
     ports: ["5000:5000"]
