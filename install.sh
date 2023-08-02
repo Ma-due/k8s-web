@@ -60,3 +60,4 @@ apt install -y kubectl kubeadm kubelet
 sed -i 's/"cri"//g' /etc/containerd/config.toml
 systemctl restart containerd
 
+echo "kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml"
