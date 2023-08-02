@@ -1,4 +1,4 @@
-#!/Users/parkchangheon/PycharmProjects/k8s-web/venv/bin/python
+#!/Users/parkchangheon/my/git/k8s-web/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
