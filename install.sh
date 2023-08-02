@@ -50,6 +50,13 @@ EOF
 apt update
 apt apt-transport-https
 
+sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+
+apt update
+apt install -y kubectl kubeadm kubelet
+
 sed -i 's/"cri"//g' /etc/containerd/config.toml
 systemctl restart containerd
 
